@@ -1,0 +1,26 @@
+{
+  "name": "forTuneTelling",
+  "description": "个人爱好小说网站",
+  "main": "",
+  "authors": [
+    "sensir136"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "爱小说"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.3",
+    "angular-ui-router": "^0.2.18"
+  }
+}
