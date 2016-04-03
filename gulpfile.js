@@ -16,7 +16,7 @@ elixir(function(mix) {
         baseDir: './resources',
         blade: true,
         dest: '/views/',
-        pretty: true,
+        pretty: false,
         search: '**/*.jade',
         src: '/assets/tpls/'
     });

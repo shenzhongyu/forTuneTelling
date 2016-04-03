@@ -10,7 +10,16 @@
  |
  */
 
+require('../less/app.less');
+require('../less/main.less');
+
+
+
 window.jQuery = window.$ = require('../../../bower_components/jquery/dist/jquery.js');
 require('../../../bower_components/bootstrap/dist/js/bootstrap.js');
 require('../../../bower_components/angular/angular.js');
 require('../../../bower_components/angular-ui-router/release/angular-ui-router.js');
+require('../extra/ngStorage.js');
+
+
+

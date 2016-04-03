@@ -5,6 +5,10 @@
  */
 Route::group(['prefix' => 'backstage','namespace' => 'Admin'],function(){
 
+    Route::get('/views/{name}',function($name){
+        return view($name);
+    });
+
     Route::any('/{path?}',function(){
         return view('admin.layouts.main');
     })->where('path','.+');

@@ -5,12 +5,12 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry: {
         main: "./resources/assets/js/main.js",
-        backstage:"./resources/assets/js/backstage/app.js" //后台资源文件主入口
+        backstage:["./resources/assets/js/backstage/app.js"]
     },
     output: {
         path: path.resolve(__dirname, "public/"),
         filename: "js/[name].js",
-        chunkFilename: "[id].chunk.js"
+        chunkFilename: "js/[id].chunk.js"
     },
     resolve: {
         extensions: ['', '.js']
@@ -36,7 +36,7 @@ module.exports = {
                 loader: 'url',
                 query: {
                     limit: 10000,
-                    name: '/img/[hash].[ext]'
+                    name: '/img/[name].[ext]'
                 }
             }
         ]

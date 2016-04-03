@@ -1,0 +1,1 @@
+<div class="app-header navbar">@include('admin.layouts.header')</div><div class="ui-view"></div>

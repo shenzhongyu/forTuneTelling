@@ -1,0 +1,16 @@
+
+div(class="navbar-header @{{app.settings.navbarHeaderColor}}")
+    button.pull-right.visible-xs.dk(ui-toggle-class="show",data-target=".navbar-collapse"): i.glyphicon.glyphicon-cog
+    button.pull-right.visible-xs(ui-toggle-class="off-screen",data-target=".app-aside",ui-scroll="app"): i.glyphicon.glyphicon-align-justify
+    a.navbar-brand.text-lt(href="#/")
+        i.fa.fa-btc
+        img(src="{{asset('img/logo.png')}}",alt=".",class="hide")
+        span.hidden-folded.m-l-xs @{{app.name}}angular
+
+div(class="collapse pos-rlt navbar-collapse box-shadow @{{app.settings.navbarCollapseColor}}")
+    .nav.navbar-nav.hidden-xs
+        a.btn.no-shadow.navbar-btn(ng-click="app.settings.asideFolded = !app.settings.asideFolded",href='')
+            i(class="fa @{{app.settings.asideFolded ? 'fa-indent' : 'fa-dedent'}} fa-fw")
+        a(class="btn no-shadow navbar-btn",ui-toggle-class="show",target="#aside-user",href='')
+            i.icon-user.fa-fw
+
