@@ -1,0 +1,16 @@
+.aside-wrap
+    .navi-wrap
+        #aside-user.clearfi.hidden-xs.text-center.hide
+            .dropdown.wrapper(dropdown)
+                a(ui-sref="app.page.profile")
+                    span.thumb-lg.w-auto-folded.avatar.m-t-sm
+                        img.img-full(src="{{asset('img/a0.jpg')}}",alt="...")
+                a.dropdown-toggle.hidden-folded(dropdown-toggle)
+                    span.clear
+                        span.block.m-t-sm
+                            strong.font-bold.text-lt John.Smith
+                            b.caret
+                        span.text-muted.text-xs.block Art Director
+                ul.dropdown-menu.animated.fadeInRight.w.hidden-folded
+
+            .line.dk.hidden-folded

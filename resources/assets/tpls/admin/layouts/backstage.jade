@@ -1,2 +1,12 @@
 .app-header.navbar @include('admin.layouts.header')
-.ui-view
+
+<!-- menu -->
+div(class="app-aside hidden-xs @{{app.settings.asideColor}}") @include('admin.layouts.aside')
+<!-- / menu -->
+
+<!-- content -->
+.app-content
+    div(ui-butterbar)
+    a.off-screen-toggle.hide(ui-toggle-class="off-screen",data-target=".app-aside")
+    .app-content-body.fade-in-up(ui-view)
+<!-- /content -->

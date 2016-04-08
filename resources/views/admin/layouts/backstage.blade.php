@@ -1,1 +1,2 @@
-<div class="app-header navbar">@include('admin.layouts.header')</div><div class="ui-view"></div>
+<div class="app-header navbar">@include('admin.layouts.header')</div><!-- menu --><div class="app-aside hidden-xs @{{app.settings.asideColor}}">@include('admin.layouts.aside')</div><!-- / menu -->
+<!-- content --><div class="app-content"><div ui-butterbar="ui-butterbar"></div><a ui-toggle-class="off-screen" data-target=".app-aside" class="off-screen-toggle hide"></a><div ui-view="ui-view" class="app-content-body fade-in-up"></div></div><!-- /content -->

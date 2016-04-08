@@ -19,15 +19,12 @@ backstageApp.run(['$rootScope', '$state', '$stateParams', function ($rootScope, 
         });
     $locationProvider.html5Mode(true);
 
-}]).controller(['BackstageController','$scope','$translate,','$localStorage','$window',function($scope,   $translate,   $localStorage,   $window ) {
-
+}]).controller('BackstageController',['$scope', '$localStorage', '$window',function($scope, $localStorage, $window ) {
     var isIE = !!navigator.userAgent.match(/MSIE/i);
     isIE && angular.element($window.document.body).addClass('ie');
     isSmartDevice( $window ) && angular.element($window.document.body).addClass('smart');
-
-
     $scope.app = {
-        name: 'Angulr',
+        name: 'forTuneTelling',
         version: '1.3.3',
 
         color: {
@@ -53,7 +50,6 @@ backstageApp.run(['$rootScope', '$state', '$stateParams', function ($rootScope, 
         }
     };
 
-
     if ( angular.isDefined($localStorage.settings) ) {
         $scope.app.settings = $localStorage.settings;
     } else {
@@ -69,17 +65,6 @@ backstageApp.run(['$rootScope', '$state', '$stateParams', function ($rootScope, 
     }, true);
 
 
-    $scope.lang = { isopen: false };
-    $scope.langs = {en:'English', de_DE:'German', it_IT:'Italian'};
-    $scope.selectLang = $scope.langs[$translate.proposedLanguage()] || "English";
-    $scope.setLang = function(langKey, $event) {
-
-        $scope.selectLang = $scope.langs[langKey];
-
-        $translate.use(langKey);
-        $scope.lang.isopen = !$scope.lang.isopen;
-    };
-
     function isSmartDevice( $window )
     {
 
@@ -89,3 +74,4 @@ backstageApp.run(['$rootScope', '$state', '$stateParams', function ($rootScope, 
     }
 
 }]);
+
