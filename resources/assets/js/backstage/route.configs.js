@@ -6,17 +6,18 @@ backstageApp.run(['$rootScope', '$state', '$stateParams', function ($rootScope, 
     $rootScope.$stateParams = $stateParams;
 
 }]).config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/backstage/home');
     $stateProvider
-        .state('dashboard', {
+        .state('backstage', {
             abstract: true,
             url: '',
             templateUrl:'backstage/views/admin.layouts.backstage'
         })
-        .state('dashboard.home', {
-            url:'/home',
+        .state('backstage.home', {
+            url:'/backstage/home',
             template:'checkout'
         });
+    $locationProvider.html5Mode(true);
 
 }]).controller(['BackstageController','$scope','$translate,','$localStorage','$window',function($scope,   $translate,   $localStorage,   $window ) {
 

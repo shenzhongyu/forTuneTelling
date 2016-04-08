@@ -11,4 +11,4 @@ module.exports.directives = angular.module('directives',[]);
 module.exports.resServers = angular.module('resServers',[]);
 
 require('./route.configs.js');
-require('./directives/ui-toggleclass.js')
+require('./directives/ui-toggleclass.js');
